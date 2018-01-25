@@ -1,0 +1,18 @@
+name: CleanChat
+description: Keep your Minecraft Server chat clean
+author: Spimy
+main: dev.spimy.cleanchat.Main
+version: 1.0
+
+commands:
+  cleanchat: 
+    description: Commands for cleanchat
+    usage: /<command> <type>
+    aliases: [cc, cleanc, cchat]
+    
+permissions:
+  cc.swear:
+    description: Bypass antiswear
+    default: op
+  cc.reload:
+    description: Permission to reload the config file

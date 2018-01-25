@@ -1,0 +1,81 @@
+#Version: 1.0
+#Make sure all messages are within inverted comma ['']!
+#------------------------------------------------------------------------------------
+#-¦¦¦¦¦¦¦¦¦¦¦¦¦¦-¦¦¦¦¦¦¦¦¦¦¦¦¦¦-¦¦¦¦¦¦¦¦¦¦-¦¦¦¦¦¦----------¦¦¦¦¦¦-¦¦¦¦¦¦¦¦--¦¦¦¦¦¦¦¦-
+#-¦¦¦¦¦¦¦¦¦¦¦¦¦¦-¦¦¦¦¦¦¦¦¦¦¦¦¦¦-¦¦¦¦¦¦¦¦¦¦-¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦-¦¦¦¦¦¦¦¦--¦¦¦¦¦¦¦¦-
+#-¦¦¦¦¦¦¦¦¦¦¦¦¦¦-¦¦¦¦¦¦¦¦¦¦¦¦¦¦-¦¦¦¦¦¦¦¦¦¦-¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦-¦¦¦¦¦¦¦¦--¦¦¦¦¦¦¦¦-
+#-¦¦¦¦¦¦---------¦¦¦¦¦¦--¦¦¦¦¦¦---¦¦¦¦¦¦---¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦---¦¦¦¦¦¦¦¦¦¦¦¦¦¦---
+#-¦¦¦¦¦¦¦¦¦¦¦¦¦¦-¦¦¦¦¦¦¦¦¦¦¦¦¦¦---¦¦¦¦¦¦---¦¦¦¦¦¦--¦¦¦¦¦¦--¦¦¦¦¦¦---¦¦¦¦¦¦¦¦¦¦¦¦¦¦---
+#-¦¦¦¦¦¦¦¦¦¦¦¦¦¦-¦¦¦¦¦¦¦¦¦¦¦¦¦¦---¦¦¦¦¦¦---¦¦¦¦¦¦--¦¦¦¦¦¦--¦¦¦¦¦¦-----¦¦¦¦¦¦¦¦¦¦-----
+#-¦¦¦¦¦¦¦¦¦¦¦¦¦¦-¦¦¦¦¦¦¦¦¦¦¦¦¦¦---¦¦¦¦¦¦---¦¦¦¦¦¦--¦¦¦¦¦¦--¦¦¦¦¦¦-------¦¦¦¦¦¦-------
+#---------¦¦¦¦¦¦-¦¦¦¦¦¦-----------¦¦¦¦¦¦---¦¦¦¦¦¦----------¦¦¦¦¦¦-------¦¦¦¦¦¦-------
+#-¦¦¦¦¦¦¦¦¦¦¦¦¦¦-¦¦¦¦¦¦---------¦¦¦¦¦¦¦¦¦¦-¦¦¦¦¦¦----------¦¦¦¦¦¦-------¦¦¦¦¦¦-------
+#-¦¦¦¦¦¦¦¦¦¦¦¦¦¦-¦¦¦¦¦¦---------¦¦¦¦¦¦¦¦¦¦-¦¦¦¦¦¦----------¦¦¦¦¦¦-------¦¦¦¦¦¦-------
+#-¦¦¦¦¦¦¦¦¦¦¦¦¦¦-¦¦¦¦¦¦---------¦¦¦¦¦¦¦¦¦¦-¦¦¦¦¦¦----------¦¦¦¦¦¦-------¦¦¦¦¦¦-------
+#------------------------------------------------------------------------------------
+
+#-= Variables =-
+#{prefix}: Replaced by the prefix set.
+#{player}: Replaced by the player name.
+#{bannedword}: Replaced by the banned word.
+#{cooldown}: Replaced by seconds for spam cooldown
+
+#Prefix for messages.
+prefix: '&f[&aCleanChat&f] &7»'
+
+#Enable/Disable Events
+allowSwearing: false
+allowAdvertise: false
+allowSpamming: false
+
+#-= Anti-Swear =-
+#Message when someone curses/swears.
+noCurseMsg: '{prefix} &cThe word {bannedword} has been banned!'
+
+#List of banned words.
+#Note: banned words that repeats the same word will resolve in the noCurseMsg to get sent twice.
+#Example: fuck and fucker repeats itself. Put fuck once and no need to type fucker in.
+BannedWords:
+- 'fuck'
+- 'dick'
+- 'shit'
+- 'bitch'
+- 'pussy'
+- 'vagina'
+- 'dipshit'
+- 'douchebag'
+- 'cock'
+- 'penis'
+- 'cunt'
+- 'cum'
+- 'dildo'
+- 'vibrator'
+- 'masturbate'
+- 'masturbation'
+- 'boobs'
+- 'tits'
+- 'titties'
+- 'clitoris'
+- 'rape'
+- 'rapist'
+- 'gey'
+- 'gay'
+- 'lesbian'
+- 'nigga'
+- 'nigger'
+
+#-= Anti-Advertise =-
+#Message when someone advertises.
+noAdMsg: '{prefix} &cYou are not allowed to advertise!'
+
+#-= Anti-Spam =-
+#Message when someone spams.
+noSpamMsg: '{prefix} &cDo not spam! Wait for {cooldown} before chatting!'
+
+#Cooldown before a player can chat again (in seconds).
+#Example: '60' is 1 minute, '86400' is 24 hours (1 day).
+cooldownSeconds: 5
+
+#-= Other Messages =-
+reloadMsg: '{prefix} &aCleanChat has been reloaded'
+noPerm: '{prefix} &cYou do not have the permission to do this!'
